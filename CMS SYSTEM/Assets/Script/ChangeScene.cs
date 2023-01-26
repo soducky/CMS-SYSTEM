@@ -5,18 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void SettingAndEditBtnClik()
+    public void SettingBtnClik()
     {
-        if (this.gameObject.tag == "Setting")
-        {
             SceneManager.LoadScene("SettingScene");
-        }
+     
+    }
 
-        else if(this.gameObject.tag == "Edit")
-        {
-            SceneManager.LoadScene("SettingScene");
-        }
-        
+    public void EditBtn()
+    {
+        SceneManager.LoadScene("EditScene");
     }
 
     public void BackButton()
