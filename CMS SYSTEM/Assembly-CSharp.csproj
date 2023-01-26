@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\TestScript.cs" />
     <Compile Include="Assets\Script\ChangeScene.cs" />
+    <Compile Include="Assets\Script\NumberTrans.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

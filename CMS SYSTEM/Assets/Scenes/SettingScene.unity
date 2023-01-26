@@ -748,8 +748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginalPrefab: {fileID: 2870981703570628104, guid: 3a982f7c6a5bd384bbe9039bd324c237, type: 3}
   Parent: {fileID: 22553922}
-  NumberText:
-  - {fileID: 0}
 --- !u!114 &1419452614
 MonoBehaviour:
   m_ObjectHideFlags: 0
