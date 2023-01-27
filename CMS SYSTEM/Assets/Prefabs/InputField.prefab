@@ -1244,7 +1244,7 @@ GameObject:
   - component: {fileID: 2870981703570628105}
   m_Layer: 5
   m_Name: InputField
-  m_TagString: Untagged
+  m_TagString: InputField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1256,7 +1256,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2870981703570628104}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -1286,7 +1286,6 @@ GameObject:
   - component: {fileID: 2870981703601168674}
   - component: {fileID: 2870981703601168676}
   - component: {fileID: 2870981703601168675}
-  - component: {fileID: 260704711663917922}
   m_Layer: 5
   m_Name: Number
   m_TagString: Untagged
@@ -1356,50 +1355,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 01.
---- !u!114 &260704711663917922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870981703601168673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e047b815064c46e4c801c9143fe6b2cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NumberText:
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
-  - {fileID: 2870981703601168675}
 --- !u!1 &2870981703603314318
 GameObject:
   m_ObjectHideFlags: 0

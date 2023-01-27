@@ -8,6 +8,7 @@ TagManager:
   - Edit
   - Back
   - Number
+  - InputField
   layers:
   - Default
   - TransparentFX
