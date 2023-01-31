@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -11,10 +12,13 @@ public class TestScript : MonoBehaviour
     public GameObject OriginalPrefab;
     public Transform Parent;
     public GameObject[] clone = new GameObject[30];
+    List<GameObject> clonelist = new List<GameObject>();
 
     int[] NumMax = new int[30];
-    public Text[] NumberText;
+    public Text[] NumberText = new Text[30];
+ 
     int i = 1;
+    bool Switch = true;
 
     void Start()
     {
@@ -25,13 +29,29 @@ public class TestScript : MonoBehaviour
     }
     public void PrefabAddBtn()
     {
+        if (Switch == true)
+        {
+            clone[i] = Instantiate(OriginalPrefab, Parent);
+            clone[i].name = "Clone" + NumMax[i].ToString();
+            clone[i].transform.GetChild(6).name = "CloneNumber" + NumMax[i].ToString();
+            clonelist = clone.ToList();
 
-        clone[i] = Instantiate(OriginalPrefab, Parent);
-        clone[i].name = "clone"+ NumMax[i].ToString();
-        NumberText[i] = clone[i].GetComponent<Text>();
-      //  NumberText[i].text = NumMax[i].ToString() + ".";
-        ++i;
-        Debug.Log("d");
+            NumberText[i] = clone[i].transform.GetChild(6).GetComponent<Text>();
+            NumberText[i].text = NumMax[i].ToString() + ".";
+
+            i++;
+
+            if (i == 30)
+            {
+                Switch = false;
+            }
+        }
+
+        else if(Switch == false)
+        {
+            return;
+        }
 
     }
 }
+
