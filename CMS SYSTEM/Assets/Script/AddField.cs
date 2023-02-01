@@ -6,19 +6,21 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class AddField : MonoBehaviour
 {
     public GameObject OriginalPrefab;
     public Transform Parent;
-
     public GameObject WaringMent;
 
-    public GameObject[] clone = new GameObject[30];
-    List<GameObject> clonelist = new List<GameObject>();
+    // public Text[] NumberText = new Text[30];
+    // public GameObject[] clone = new GameObject[30];
+
+    public List<GameObject> clonelist = new List<GameObject>();
+    public List<Text> numbertextlist = new List<Text>();
 
     int[] NumMax = new int[30];
-    public Text[] NumberText = new Text[30];
  
     int i = 1;
     bool Switch = true;
@@ -34,14 +36,26 @@ public class AddField : MonoBehaviour
     {
         if (Switch == true)
         {
-            clone[i] = Instantiate(OriginalPrefab, Parent);
+
+          /*  clone[i] = Instantiate(OriginalPrefab, Parent);
             clone[i].name = "Clone" + NumMax[i].ToString();
             clone[i].transform.GetChild(6).name = "CloneNumber" + NumMax[i].ToString();
             clonelist = clone.ToList();
+            Debug.Log(clonelist.Count);
 
             NumberText[i] = clone[i].transform.GetChild(6).GetComponent<Text>();
             NumberText[i].text = NumMax[i].ToString() + ".";
+            numbertextlist = NumberText.ToList();
+            Debug.Log(numbertextlist.Count);
+          */
 
+            clonelist.Add(Instantiate(OriginalPrefab,Parent));
+            clonelist[i].name = "Clone" + NumMax[i].ToString();;
+
+            numbertextlist.Add(clonelist[i].transform.GetChild(6).GetComponent<Text>());
+            numbertextlist[i].name = "Clone" + NumMax[i].ToString();
+            numbertextlist[i].text = NumMax[i].ToString() + ".";
+            
             i++;
 
             if (i == 30)
@@ -57,6 +71,7 @@ public class AddField : MonoBehaviour
         }
 
     }
+
 
     void TimeDelay()
     {

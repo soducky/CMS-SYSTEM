@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\AddField.cs" />
     <Compile Include="Assets\Script\ChangeScene.cs" />
+    <Compile Include="Assets\Script\DeleteField.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
