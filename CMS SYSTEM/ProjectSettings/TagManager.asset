@@ -9,6 +9,7 @@ TagManager:
   - Back
   - Number
   - InputField
+  - AddButton
   layers:
   - Default
   - TransparentFX

@@ -56,9 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\AddField.cs" />
+    <Compile Include="Assets\Script\AddButton.cs" />
     <Compile Include="Assets\Script\ChangeScene.cs" />
-    <Compile Include="Assets\Script\DeleteField.cs" />
+    <Compile Include="Assets\Script\DeleteButton.cs" />
+    <Compile Include="Assets\Script\RemoveList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
