@@ -19,6 +19,7 @@ public class AddButton : MonoBehaviour
 
     public List<GameObject> clonelist = new List<GameObject>();
     public List<Text> numbertextlist = new List<Text>();
+    public GameObject DeleteButton;
 
     int[] NumMax = new int[30];
  
@@ -35,7 +36,15 @@ public class AddButton : MonoBehaviour
 
     private void Update()
     {
+        if(clonelist.Count == 1)
+        {
+            DeleteButton.SetActive(false);
+        }
 
+        else
+        {
+            DeleteButton.SetActive(true);
+        }
     }
     public void PrefabAddBtn()
     {
@@ -59,7 +68,7 @@ public class AddButton : MonoBehaviour
 
             numbertextlist.Add(clonelist[i].transform.GetChild(6).GetComponent<Text>());
             numbertextlist[i].name = "Clone" + NumMax[i].ToString();
-            numbertextlist[i].text = NumMax[i].ToString() + ".";
+            numbertextlist[i].text = NumMax[i].ToString();
             
             i++;
 

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
 public class DeleteButton : MonoBehaviour
 {
@@ -53,9 +54,20 @@ public class DeleteButton : MonoBehaviour
             addButton.SetActive(true);
             GameObject.Find("InputFieldPrefab").GetComponent<RemoveList>().CheckSignFalse();
 
-            for (int j = 2; j <= boxcolliderlist.Count; j++)
+            try
             {
-                GameObject.Find("Clone" + j).GetComponent<RemoveList>().CheckSignFalse();
+                for (int j = 2; j <= boxcolliderlist.Count; j++)
+                {
+                    GameObject.Find("Clone" + j).GetComponent<RemoveList>().CheckSignFalse();
+                }
+            }
+
+            catch(Exception ex)
+            {
+                Debug.Log(ex);
+
+                List<GameObject> clonelist = GameObject.Find("AddButton").GetComponent<AddButton>().clonelist;
+
             }
 
             count = false;
