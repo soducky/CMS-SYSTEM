@@ -94,10 +94,8 @@ public class AddButton : MonoBehaviour
 
     public void MinusI()
     {
-        Debug.Log(i);
         i--;
         Switch = true;
-        Debug.Log(i);
     }
 }
 

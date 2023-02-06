@@ -358,6 +358,8 @@
 "Assets/Script/AddButton.cs"
 "Assets/Script/ChangeScene.cs"
 "Assets/Script/DeleteButton.cs"
+"Assets/Script/GameManager.cs"
+"Assets/Script/InputData.cs"
 "Assets/Script/RemoveList.cs"
 -langversion:9.0
 

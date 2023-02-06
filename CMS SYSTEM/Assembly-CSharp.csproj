@@ -60,6 +60,8 @@
     <Compile Include="Assets\Script\AddButton.cs" />
     <Compile Include="Assets\Script\ChangeScene.cs" />
     <Compile Include="Assets\Script\DeleteButton.cs" />
+    <Compile Include="Assets\Script\InputData.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
