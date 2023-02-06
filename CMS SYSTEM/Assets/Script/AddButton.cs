@@ -20,17 +20,16 @@ public class AddButton : MonoBehaviour
     public List<GameObject> clonelist = new List<GameObject>();
     public List<Text> numbertextlist = new List<Text>();
     public GameObject DeleteButton;
-
-    int[] NumMax = new int[30];
- 
+    public List<int> Valuelist = new List<int>();
+    
     int i = 1;
     bool Switch = true;
 
     void Start()
     {
-        for (int k=0; k < NumMax.Length; k++)
+        for (int k=0; k < Valuelist.Count; k++)
         {
-            NumMax[k] = k+1;
+            Valuelist[k] = k+1;
         }
     }
 
@@ -64,14 +63,14 @@ public class AddButton : MonoBehaviour
           */
 
             clonelist.Add(Instantiate(OriginalPrefab,Parent));
-            clonelist[i].name = "Clone" + NumMax[i].ToString();;
-
+            clonelist[i].name = "Clone" + Valuelist[i].ToString();
+  
             numbertextlist.Add(clonelist[i].transform.GetChild(6).GetComponent<Text>());
-            numbertextlist[i].name = "Clone" + NumMax[i].ToString();
-            numbertextlist[i].text = NumMax[i].ToString();
+            numbertextlist[i].name = "Clone" + Valuelist[i].ToString();
+            numbertextlist[i].text = Valuelist[i].ToString();
             
             i++;
-
+            
             if (i == 30)
             {
                 Switch = false;
@@ -91,6 +90,14 @@ public class AddButton : MonoBehaviour
     void TimeDelay()
     {
         WaringMent.SetActive(false);
+    }
+
+    public void MinusI()
+    {
+        Debug.Log(i);
+        i--;
+        Switch = true;
+        Debug.Log(i);
     }
 }
 

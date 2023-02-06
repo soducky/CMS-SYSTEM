@@ -10,6 +10,7 @@ TagManager:
   - Number
   - InputField
   - AddButton
+  - DeleteButton
   layers:
   - Default
   - TransparentFX

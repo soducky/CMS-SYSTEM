@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,9 +14,9 @@ public class RemoveList : MonoBehaviour, IPointerClickHandler
     public GameObject CancelMent;
     public Text CancelInfoText;
     public Button OkayButton;
+    public GameObject ScrollView;
 
     bool CheckSign = false;
-
     public void OnPointerClick(PointerEventData eventData)
     {
         
@@ -166,7 +169,6 @@ public class RemoveList : MonoBehaviour, IPointerClickHandler
 
     public void Okaybutton()
     {
-
         switch (this.gameObject.name)
         {
             case "Clone2":
@@ -287,8 +289,10 @@ public class RemoveList : MonoBehaviour, IPointerClickHandler
         }
 
         Destroy(this.gameObject);
-        Debug.Log(this.gameObject);
-        CancelMent.SetActive(false);
+
+        CheckSignFalse();
+
+        ScrollView.SetActive(false);   
 
     }
 }

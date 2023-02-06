@@ -874,6 +874,7 @@ MonoBehaviour:
   CancelMent: {fileID: 874010389}
   CancelInfoText: {fileID: 857065046}
   OkayButton: {fileID: 966475275}
+  ScrollView: {fileID: 1982156917}
 --- !u!61 &923256879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1290,6 +1291,7 @@ MonoBehaviour:
   numbertextlist:
   - {fileID: 1019252184}
   DeleteButton: {fileID: 1423536842}
+  Valuelist: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &1419452614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,7 +1401,7 @@ GameObject:
   - component: {fileID: 1423536847}
   m_Layer: 5
   m_Name: 'DeleteButton '
-  m_TagString: Untagged
+  m_TagString: DeleteButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,6 +1535,7 @@ MonoBehaviour:
   scrollView: {fileID: 1982156920}
   InputFieldPrefab: {fileID: 923256879}
   addButton: {fileID: 1419452611}
+  ScrollView: {fileID: 1982156917}
   boxcolliderlist:
   - {fileID: 923256879}
   count: 0
