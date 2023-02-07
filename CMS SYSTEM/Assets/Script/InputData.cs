@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Cache;
@@ -7,159 +8,55 @@ using UnityEngine.UI;
 public class InputData : MonoBehaviour
 {
 
-   // public Button SaveButton;
-
-    void Start()
+    public void WarmingUpLoad()
     {
-    }
+        List<GameObject> clonelist = GameObject.FindWithTag("AddButton").GetComponent<AddButton>().clonelist;
 
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
+        for (int k = 0; k < DataManager.Instance.data.i; k++)
         {
-            GameManager.instance.Name.text = PlayerPrefs.GetString("Name");
-            GameManager.instance.MacAddress.text = PlayerPrefs.GetString("MacAddress");
-            GameManager.instance.IpAddress.text = PlayerPrefs.GetString("IpAddress");
-            GameManager.instance.Port.text = PlayerPrefs.GetInt("Port").ToString();
+            clonelist[k].transform.GetChild(2).GetComponent<InputField>().text = PlayerPrefs.GetString("Name" + k.ToString());
+            clonelist[k].transform.GetChild(1).GetComponent<InputField>().text = PlayerPrefs.GetString("MacAddress" + k.ToString());
+            clonelist[k].transform.GetChild(0).GetComponent<InputField>().text = PlayerPrefs.GetString("IPAddress" + k.ToString());
+            clonelist[k].transform.GetChild(3).GetComponent<InputField>().text = PlayerPrefs.GetInt("Port" + k.ToString()).ToString();
         }
     }
 
-    void WarmingUpSave()
+    public void WarmingUpSave()
     {
-       /* switch (this.gameObject.name)
+        PlayerPrefs.DeleteAll();
+
+        List<GameObject> clonelist = GameObject.FindWithTag("AddButton").GetComponent<AddButton>().clonelist;
+
+        for (int k = 0; k < DataManager.Instance.data.i; k++)
         {
-            case "InputFieldPrefab":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone2":
-                SaveButton.onClick.AddListener(Save );
-                break;
-
-            case "Clone3":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone4":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone5":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone6":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone7":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone8":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone9":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone10":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone11":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone12":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone13":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone14":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone15":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone16":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone17":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone18":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone19":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone20":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone21":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone22":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone23":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone24":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone25":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone26":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone27":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone28":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone29":
-                SaveButton.onClick.AddListener(Save);
-                break;
-
-            case "Clone30":
-                SaveButton.onClick.AddListener(Save);
-                break;
-        }*/
+            PlayerPrefs.SetString("Name" + k.ToString(), clonelist[k].transform.GetChild(2).GetComponent<InputField>().text);
+            PlayerPrefs.SetString("MacAddress" + k.ToString(), clonelist[k].transform.GetChild(1).GetComponent<InputField>().text);
+            PlayerPrefs.SetString("IPAddress" + k.ToString(), clonelist[k].transform.GetChild(0).GetComponent<InputField>().text);
+            PlayerPrefs.SetInt("Port" + k.ToString(), Int32.Parse(clonelist[k].transform.GetChild(3).GetComponent<InputField>().text));
+        }
     }
+
+    public void GameDataSaveKey() 
+    {
+        DataManager.Instance.data.Name.Clear();
+        DataManager.Instance.data.MacAddress.Clear();
+        DataManager.Instance.data.IPAddress.Clear();
+        DataManager.Instance.data.Port.Clear();
+
+        for (int k = 0; k < DataManager.Instance.data.i; k++)
+        {
+            DataManager.Instance.data.Name.Add(PlayerPrefs.GetString("Name" + k.ToString()));
+            DataManager.Instance.data.MacAddress.Add(PlayerPrefs.GetString("MacAddress" + k.ToString()));
+            DataManager.Instance.data.IPAddress.Add(PlayerPrefs.GetString("IPAddress" + k.ToString()));
+            DataManager.Instance.data.Port.Add(PlayerPrefs.GetInt("Port" + k.ToString()).ToString());
+        }
+    }
+
     public void Save()
     {
-      // WarmingUpSave();
-
-        PlayerPrefs.SetString("Name", GameManager.instance.Name.text);
-        PlayerPrefs.SetString("MacAddress", GameManager.instance.MacAddress.text);
-        PlayerPrefs.SetString("IpAddress", GameManager.instance.IpAddress.text);
-        PlayerPrefs.SetInt("Port", int.Parse(GameManager.instance.Port.text));
-
-        Debug.Log("d");
+        WarmingUpSave();
+        GameDataSaveKey();
+        DataManager.Instance.SaveGameData();
     }
 
 }

@@ -11,6 +11,7 @@ public class DeleteButton : MonoBehaviour
     public Image scrollView;
     public BoxCollider2D InputFieldPrefab;
     public GameObject addButton;
+    public GameObject SaveButton;
     public GameObject ScrollView;
 
     public List<BoxCollider2D> boxcolliderlist = new List<BoxCollider2D>();
@@ -47,6 +48,7 @@ public class DeleteButton : MonoBehaviour
         List<GameObject> clonelist = GameObject.FindWithTag("AddButton").GetComponent<AddButton>().clonelist;
 
         addButton.SetActive(false);
+        SaveButton.SetActive(false);
 
         GameObject.Find("InputFieldPrefab").GetComponent<RemoveList>().CheckSignTrue();
 
@@ -76,6 +78,7 @@ public class DeleteButton : MonoBehaviour
         ScrollView.SetActive(true);
         ChangeColor();
         addButton.SetActive(true);
+        SaveButton.SetActive(true);
         GameObject.Find("InputFieldPrefab").GetComponent<RemoveList>().CheckSignFalse();
 
         try

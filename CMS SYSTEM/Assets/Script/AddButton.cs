@@ -21,9 +21,9 @@ public class AddButton : MonoBehaviour
     public List<Text> numbertextlist = new List<Text>();
     public GameObject DeleteButton;
     public List<int> Valuelist = new List<int>();
-    
-    int i = 1;
+
     bool Switch = true;
+    int j = 1;
 
     void Start()
     {
@@ -31,6 +31,8 @@ public class AddButton : MonoBehaviour
         {
             Valuelist[k] = k+1;
         }
+
+        StartLoadData();
     }
 
     private void Update()
@@ -63,19 +65,20 @@ public class AddButton : MonoBehaviour
           */
 
             clonelist.Add(Instantiate(OriginalPrefab,Parent));
-            clonelist[i].name = "Clone" + Valuelist[i].ToString();
-  
-            numbertextlist.Add(clonelist[i].transform.GetChild(6).GetComponent<Text>());
-            numbertextlist[i].name = "Clone" + Valuelist[i].ToString();
-            numbertextlist[i].text = Valuelist[i].ToString();
-            
-            i++;
-            
-            if (i == 30)
+            InputFiledNull();
+            clonelist[j].name = "Clone" + Valuelist[j].ToString();
+
+            numbertextlist.Add(clonelist[j].transform.GetChild(6).GetComponent<Text>());
+            numbertextlist[j].name = "Clone" + Valuelist[j].ToString();
+            numbertextlist[j].text = Valuelist[j].ToString();
+
+            j++;
+            DataManager.Instance.data.i++;
+
+            if (j == 30)
             {
                 Switch = false;
             }
-
         }
 
         else if(Switch == false)
@@ -83,10 +86,7 @@ public class AddButton : MonoBehaviour
             WaringMent.SetActive(true);
             Invoke("TimeDelay", 2f);
         }
-
     }
-
-
     void TimeDelay()
     {
         WaringMent.SetActive(false);
@@ -94,8 +94,68 @@ public class AddButton : MonoBehaviour
 
     public void MinusI()
     {
-        i--;
+        j--;
+        DataManager.Instance.data.i--;
         Switch = true;
+    }
+
+    public void StartLoadData()
+    {
+        DataManager.Instance.LoadGameData();
+
+        for (int m = 1; m < DataManager.Instance.data.i; m++)
+        {
+            CopyAddButton();
+        }
+
+        GameObject.FindWithTag("InputField").GetComponent<InputData>().WarmingUpLoad();
+    }
+
+    public void CopyAddButton()
+    {
+        if (Switch == true)
+        {
+
+            /*  clone[i] = Instantiate(OriginalPrefab, Parent);
+              clone[i].name = "Clone" + NumMax[i].ToString();
+              clone[i].transform.GetChild(6).name = "CloneNumber" + NumMax[i].ToString();
+              clonelist = clone.ToList();
+              Debug.Log(clonelist.Count);
+
+              NumberText[i] = clone[i].transform.GetChild(6).GetComponent<Text>();
+              NumberText[i].text = NumMax[i].ToString() + ".";
+              numbertextlist = NumberText.ToList();
+              Debug.Log(numbertextlist.Count);
+            */
+
+            clonelist.Add(Instantiate(OriginalPrefab, Parent));
+            clonelist[j].name = "Clone" + Valuelist[j].ToString();
+
+            numbertextlist.Add(clonelist[j].transform.GetChild(6).GetComponent<Text>());
+            numbertextlist[j].name = "Clone" + Valuelist[j].ToString();
+            numbertextlist[j].text = Valuelist[j].ToString();
+
+            j++;
+
+            if (j == 30)
+            {
+                Switch = false;
+            }
+        }
+
+        else if (Switch == false)
+        {
+            WaringMent.SetActive(true);
+            Invoke("TimeDelay", 2f);
+        }
+    }
+
+    void InputFiledNull()
+    {
+        clonelist[j].transform.GetChild(2).GetComponent<InputField>().text = null;
+        clonelist[j].transform.GetChild(1).GetComponent<InputField>().text = null;
+        clonelist[j].transform.GetChild(0).GetComponent<InputField>().text = null;
+        clonelist[j].transform.GetChild(3).GetComponent<InputField>().text = "0";
     }
 }
 

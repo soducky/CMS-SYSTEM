@@ -56,12 +56,13 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\GameData.cs" />
     <Compile Include="Assets\Script\RemoveList.cs" />
     <Compile Include="Assets\Script\AddButton.cs" />
-    <Compile Include="Assets\Script\ChangeScene.cs" />
-    <Compile Include="Assets\Script\DeleteButton.cs" />
     <Compile Include="Assets\Script\InputData.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\ChangeScene.cs" />
+    <Compile Include="Assets\Script\DataManager.cs" />
+    <Compile Include="Assets\Script\DeleteButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
