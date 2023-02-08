@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\ChangeScene.cs" />
     <Compile Include="Assets\Script\DataManager.cs" />
     <Compile Include="Assets\Script\DeleteButton.cs" />
+    <Compile Include="Assets\Script\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

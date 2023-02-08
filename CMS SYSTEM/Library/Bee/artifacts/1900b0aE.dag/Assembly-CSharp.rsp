@@ -362,6 +362,7 @@
 "Assets/Script/GameData.cs"
 "Assets/Script/InputData.cs"
 "Assets/Script/RemoveList.cs"
+"Assets/Script/Test.cs"
 -langversion:9.0
 
 /deterministic

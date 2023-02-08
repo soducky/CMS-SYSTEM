@@ -147,6 +147,109 @@ public class RemoveList : MonoBehaviour, IPointerClickHandler
                 case "Clone30":
                     OkayButton.onClick.AddListener(Okaybutton);
                     break;
+                case "Clone31":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone32":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone33":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone34":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone35":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone36":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone37":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone38":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone39":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone40":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone41":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone42":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone43":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone44":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone45":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone46":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone47":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone48":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone49":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone50":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone51":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone52":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone53":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone54":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone55":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
+
+                case "Clone56":
+                    OkayButton.onClick.AddListener(Okaybutton);
+                    break;
             }
         }
     }

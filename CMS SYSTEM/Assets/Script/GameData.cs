@@ -15,6 +15,7 @@ using UnityEngine.UIElements;
 public class Data
 {
     public int i = 1;
+   // public int s;
 
     public List<String> Name = new List<String>();
     public List<String> MacAddress = new List<String>();

@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+
+    public void StartChangeScene()
+    {
+            AutoLoadMainScene();
+    }
+
     public void SettingBtnClik()
     {
-            SceneManager.LoadScene("SettingScene");
+        SceneManager.LoadScene("SettingScene");
      
     }
 
-    public void EditBtn()
+    public void BackButton()
     {
-        SceneManager.LoadScene("EditScene");
+        SceneManager.LoadScene("MainScene");
     }
 
-    public void BackButton()
+    public void AutoLoadMainScene()
     {
         SceneManager.LoadScene("MainScene");
     }

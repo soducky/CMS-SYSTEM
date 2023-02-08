@@ -11,6 +11,7 @@ TagManager:
   - InputField
   - AddButton
   - DeleteButton
+  - BackButton
   layers:
   - Default
   - TransparentFX
