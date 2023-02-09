@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
-
-    public void StartChangeScene()
-    {
-            AutoLoadMainScene();
-    }
-
     public void SettingBtnClik()
     {
         SceneManager.LoadScene("SettingScene");
@@ -23,8 +17,4 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
-    public void AutoLoadMainScene()
-    {
-        SceneManager.LoadScene("MainScene");
-    }
 }

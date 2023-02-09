@@ -15,10 +15,11 @@ using UnityEngine.UIElements;
 public class Data
 {
     public int i = 1;
-   // public int s;
 
     public List<String> Name = new List<String>();
     public List<String> MacAddress = new List<String>();
     public List<String> IPAddress = new List<String>();
     public List<string> Port = new List<string>();
+    public List<String> ZoneName = new List<String>();  
 }
+

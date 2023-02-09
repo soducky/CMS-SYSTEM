@@ -33,13 +33,12 @@ public class AddButton : MonoBehaviour
         }
 
         StartLoadData();
-       //GameObject.FindWithTag("BackButton").AddComponent<ChangeScene>().StartChangeScene();
+
     }
 
     private void Update()
     {
-
-            if (clonelist.Count == 1)
+        if (clonelist.Count == 1)
         {
             DeleteButton.SetActive(false);
         }
@@ -158,7 +157,7 @@ public class AddButton : MonoBehaviour
         clonelist[j].transform.GetChild(1).GetComponent<InputField>().text = null;
         clonelist[j].transform.GetChild(0).GetComponent<InputField>().text = null;
         clonelist[j].transform.GetChild(3).GetComponent<InputField>().text = "0";
+        clonelist[j].transform.GetChild(7).GetComponent<InputField>().text = null;
     }
-
 }
 

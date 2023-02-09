@@ -355,6 +355,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/MainScript/Carousel.cs"
 "Assets/Script/AddButton.cs"
 "Assets/Script/ChangeScene.cs"
 "Assets/Script/DataManager.cs"
@@ -362,7 +363,6 @@
 "Assets/Script/GameData.cs"
 "Assets/Script/InputData.cs"
 "Assets/Script/RemoveList.cs"
-"Assets/Script/Test.cs"
 -langversion:9.0
 
 /deterministic
