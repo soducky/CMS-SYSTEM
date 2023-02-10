@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MainScript\Carousel.cs" />
     <Compile Include="Assets\Script\GameData.cs" />
     <Compile Include="Assets\Script\RemoveList.cs" />
     <Compile Include="Assets\Script\AddButton.cs" />
@@ -63,7 +64,7 @@
     <Compile Include="Assets\Script\ChangeScene.cs" />
     <Compile Include="Assets\Script\DataManager.cs" />
     <Compile Include="Assets\Script\DeleteButton.cs" />
-    <Compile Include="Assets\MainScript\Carousel.cs" />
+    <Compile Include="Assets\MainScript\ZoneNameLoad.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -770,6 +771,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

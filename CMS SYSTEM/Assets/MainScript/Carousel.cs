@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
 
 public class Carousel : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Carousel : MonoBehaviour
     bool selectedBtn = false;
     float[] pos;
     Scrollbar scroll;
+    int i = 0;
+    int selectedValue;
 
     void Start()
     {
@@ -62,7 +66,7 @@ public class Carousel : MonoBehaviour
                 for (int k = 0; k < selectButton.transform.childCount; k++)
                 {
                     if (k != i)
-                        selectButton.transform.GetChild(k).localScale = Vector2.Lerp(selectButton.transform.GetChild(k).localScale, new Vector2(0.7f, 0.7f), 0.1f);
+                    selectButton.transform.GetChild(k).localScale = Vector2.Lerp(selectButton.transform.GetChild(k).localScale, new Vector2(0.7f, 0.7f), 0.1f);
                 }
             }
         }
@@ -70,11 +74,35 @@ public class Carousel : MonoBehaviour
 
     public void ContentsPosition()
     {
-        float distacne = 1f / (pos.Length - 1);
-        int selectedValue = int.Parse(EventSystem.current.currentSelectedGameObject.transform.GetComponentInChildren<Text>().text) - 1;
-        StartCoroutine(selectBtn(selectedValue * distacne));
+        float distacne = 1f / (pos.Length -1 );
+        if (i>0)
+        {
+            if (selectedValue > int.Parse(EventSystem.current.currentSelectedGameObject.transform.GetComponentInChildren<Text>().text))
+            {
+                OnePlusOne();
+            }
+
+            else
+            {
+                int FianlEndValue = int.Parse(EventSystem.current.currentSelectedGameObject.transform.GetComponentInChildren<Text>().text);
+                StartCoroutine(selectBtn(FianlEndValue * distacne));
+            }
+        }
+        i = 0;
+        selectedValue = int.Parse(EventSystem.current.currentSelectedGameObject.transform.GetComponentInChildren<Text>().text);
+        i++;
+        if (i == 0)
+        {
+            StartCoroutine(selectBtn(selectedValue * distacne));
+        }
     }
 
+    public void OnePlusOne()
+    {
+        float distacne = 1f / (pos.Length - 1);
+        int EndValue = int.Parse(EventSystem.current.currentSelectedGameObject.transform.GetComponentInChildren<Text>().text) - 2;
+        StartCoroutine(selectBtn(EndValue * distacne));
+    }
     IEnumerator selectBtn(float targetValue)
     {
         selectedBtn = true;
@@ -90,4 +118,5 @@ public class Carousel : MonoBehaviour
             }
         }
     }
+
 }

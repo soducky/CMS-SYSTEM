@@ -30,6 +30,7 @@ public class InputData : MonoBehaviour
 
         for (int k = 0; k < DataManager.Instance.data.i; k++)
         {
+ 
             PlayerPrefs.SetString("Name" + k.ToString(), clonelist[k].transform.GetChild(2).GetComponent<InputField>().text);
             PlayerPrefs.SetString("MacAddress" + k.ToString(), clonelist[k].transform.GetChild(1).GetComponent<InputField>().text);
             PlayerPrefs.SetString("IPAddress" + k.ToString(), clonelist[k].transform.GetChild(0).GetComponent<InputField>().text);
