@@ -20,6 +20,6 @@ public class Data
     public List<String> MacAddress = new List<String>();
     public List<String> IPAddress = new List<String>();
     public List<string> Port = new List<string>();
-    public List<String> ZoneName = new List<String>();  
+    public List<String> ZoneName = new List<String>(); 
 }
 
