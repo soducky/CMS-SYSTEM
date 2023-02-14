@@ -359,6 +359,7 @@
 "Assets/MainScript/Carousel.cs"
 "Assets/MainScript/CMS_Name.cs"
 "Assets/MainScript/HideButtonOpen.cs"
+"Assets/MainScript/LoadObject.cs"
 "Assets/MainScript/SelectToggle.cs"
 "Assets/MainScript/ZoneNameLoad.cs"
 "Assets/MainScript/ZoneNameTitle.cs"

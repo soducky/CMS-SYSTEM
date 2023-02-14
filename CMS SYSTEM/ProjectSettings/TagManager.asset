@@ -12,6 +12,9 @@ TagManager:
   - AddButton
   - DeleteButton
   - BackButton
+  - CMS
+  - Toggle
+  - Hide
   layers:
   - Default
   - TransparentFX
