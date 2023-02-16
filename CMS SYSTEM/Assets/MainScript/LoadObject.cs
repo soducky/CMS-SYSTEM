@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadObject : MonoBehaviour
 {
     public GameObject[] CMSList;
+    public Toggle[] togglestext;
     void Start()
     {
         DataManager.Instance.LoadGameData();
@@ -15,6 +17,15 @@ public class LoadObject : MonoBehaviour
             if (DataManager.Instance.data.s[i] == false)
             {
                 CMSList[i].gameObject.SetActive(false);
+            }
+        }
+
+        for (int i = 0; i < 56; i++)
+        {
+            if (DataManager.Instance.data.modeSelect[i] == false)
+            {
+                togglestext[i].isOn= false;
+                togglestext[i].transform.GetChild(2).GetComponent<Text>().text = "PJ Mode";
             }
         }
     }
