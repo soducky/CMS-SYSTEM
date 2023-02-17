@@ -23,6 +23,7 @@ public class OnButtonClik : MonoBehaviour
 
     private void Start()
     {
+        TitleTransfer();
         ReadyStart();
         OnBtn = GetComponent<Button>();
         OnBtn.onClick.AddListener(OnBtnClik);
@@ -30,7 +31,7 @@ public class OnButtonClik : MonoBehaviour
 
     public void ReadyStart()
     {
-        if (DataManager.Instance.data.ImageLight == true)
+        if (DataManager.Instance.data.ImageLight[tmp -1] == true)
         {
             ImageChange();
         }
@@ -42,7 +43,6 @@ public class OnButtonClik : MonoBehaviour
 
     public void OnBtnCapsule()
     {
-        TitleTransfer();
 
         if (DataManager.Instance.data.modeSelect[tmp - 1] == true) // PC ¸ðµå 
         {
@@ -62,7 +62,7 @@ public class OnButtonClik : MonoBehaviour
                 if(PJ.value == 1)
                 {
                     ImageChange();
-                    DataManager.Instance.data.ImageLight = true;
+                    DataManager.Instance.data.ImageLight[tmp - 1] = true;
                     DataManager.Instance.SaveGameData();
                 }
             }

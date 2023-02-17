@@ -5,17 +5,20 @@ ScriptsOnlyBuild:
     - CMS_Name
     - Carousel
     - ChangeScene
+    - Client
     - DeleteButton
+    - DeveloperModeEnter
     - HideButtonOpen
     - InputData
     - LoadObject
     - ModeSelectToggle
+    - OffButtonClik
     - OnButtonClik
     - RemoveList
     - SelectToggle
+    - Server
     - ZoneNameLoad
     - ZoneNameTitle
-    - rv.PJLinkConnection
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -62,21 +65,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: InputData
-    methodName: Save
-  - assembly: Assembly-CSharp
-    fullTypeName: AddButton
-    methodName: PrefabAddBtn
-  - assembly: Assembly-CSharp
-    fullTypeName: DeleteButton
-    methodName: DeleteButtonClik
-  - assembly: Assembly-CSharp
-    fullTypeName: RemoveList
-    methodName: ReturnButton
-  - assembly: Assembly-CSharp
-    fullTypeName: ChangeScene
-    methodName: BackButton
-  - assembly: Assembly-CSharp
     fullTypeName: SelectToggle
     methodName: Save
   - assembly: Assembly-CSharp
@@ -101,17 +89,38 @@ ScriptsOnlyBuild:
     fullTypeName: Carousel
     methodName: ContentsPosition
   - assembly: Assembly-CSharp
-    fullTypeName: OnButtonClik
-    methodName: OnBtnClik
-  - assembly: Assembly-CSharp
     fullTypeName: ChangeScene
     methodName: SettingBtnClik
   - assembly: Assembly-CSharp
+    fullTypeName: DeveloperModeEnter
+    methodName: BackBtn
+  - assembly: Assembly-CSharp
     fullTypeName: Carousel
     methodName: ContentsPosition
   - assembly: Assembly-CSharp
     fullTypeName: Carousel
     methodName: ContentsPosition
+  - assembly: Assembly-CSharp
+    fullTypeName: DeveloperModeEnter
+    methodName: SaveBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: DeveloperModeEnter
+    methodName: EnterDeveloperBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: InputData
+    methodName: Save
+  - assembly: Assembly-CSharp
+    fullTypeName: AddButton
+    methodName: PrefabAddBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: DeleteButton
+    methodName: DeleteButtonClik
+  - assembly: Assembly-CSharp
+    fullTypeName: RemoveList
+    methodName: ReturnButton
+  - assembly: Assembly-CSharp
+    fullTypeName: ChangeScene
+    methodName: BackButton
   sceneClasses:
     Assets/Scenes/MainScene.unity:
     - Class: 1
@@ -137,55 +146,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 1758}
+      Script: {instanceID: 1754}
     - Class: 114
-      Script: {instanceID: 2004}
+      Script: {instanceID: 2000}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3076}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3172}
+      Script: {instanceID: 3070}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3522}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3974}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4264}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 4496}
+      Script: {instanceID: 4256}
     - Class: 114
-      Script: {instanceID: 5020}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5154}
+      Script: {instanceID: 5144}
     - Class: 114
-      Script: {instanceID: 5222}
+      Script: {instanceID: 5212}
     - Class: 114
-      Script: {instanceID: 5428}
+      Script: {instanceID: 5418}
     - Class: 114
-      Script: {instanceID: 5578}
+      Script: {instanceID: 5568}
     - Class: 114
-      Script: {instanceID: 5914}
+      Script: {instanceID: 5900}
     - Class: 114
-      Script: {instanceID: 6174}
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 6410}
     - Class: 114
       Script: {instanceID: 6422}
     - Class: 114
-      Script: {instanceID: 6434}
+      Script: {instanceID: 6770}
     - Class: 114
-      Script: {instanceID: 6784}
+      Script: {instanceID: 7484}
     - Class: 114
-      Script: {instanceID: 7500}
+      Script: {instanceID: 7532}
     - Class: 114
-      Script: {instanceID: 7546}
+      Script: {instanceID: 7892}
+    - Class: 114
+      Script: {instanceID: 46914}
+    - Class: 114
+      Script: {instanceID: 46928}
+    - Class: 114
+      Script: {instanceID: 94796}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -228,41 +245,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2346}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3032}
     - Class: 114
-      Script: {instanceID: 3172}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3522}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 5578}
+      Script: {instanceID: 5568}
     - Class: 114
-      Script: {instanceID: 5914}
+      Script: {instanceID: 5900}
+    - Class: 114
+      Script: {instanceID: 6410}
     - Class: 114
       Script: {instanceID: 6422}
     - Class: 114
-      Script: {instanceID: 6434}
+      Script: {instanceID: 6854}
     - Class: 114
-      Script: {instanceID: 6868}
+      Script: {instanceID: 7532}
     - Class: 114
-      Script: {instanceID: 7546}
-    - Class: 114
-      Script: {instanceID: 8194}
+      Script: {instanceID: 8184}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -297,12 +314,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: ManufacturerNameCommand
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollbarValueChangedMessageListener
@@ -318,12 +329,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: ProjectorInfo
   - hash:
       serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
@@ -408,12 +413,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RemoveList
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: Command
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -651,12 +650,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: OtherinfoCommand
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
@@ -666,12 +659,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelectToggle
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: ProductNameCommand
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -752,12 +739,6 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: PJLinkConnection
-  - hash:
-      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -774,12 +755,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: InputCommand
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -908,28 +883,16 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: dafe41f6636b1cd6acf5495f827185f0
+      Hash: b60efad06f58941bab8035efe138d4de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DataManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: PowerCommand
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: ProjectorNameCommand
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -996,12 +959,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: ErrorStatusCommand
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -1106,12 +1063,6 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: rv
-    className: LampStatusCommand
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1124,7 +1075,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: bb51763cfec19c97ea7f6b25cf7c9013
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OnButtonClik
@@ -1164,6 +1115,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 99326f76395392d8f6f055a75b788266
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OffButtonClik
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1212,8 +1169,26 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Server
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Client
+  - hash:
+      serializedVersion: 2
+      Hash: 49713ccdd23ce51003c9cd9b5366ddca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeveloperModeEnter
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SettingScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: "C:/Users/INDIGO-2020-11/Desktop/\uC0C8 \uD3F4\uB354 (2)/CMS SYSTEM.exe"
+  - Assets/Scenes/SettingScene.unity
+  playerPath: C:/Users/INDIGO-2020-11/Desktop/Unitiy/CMS SYSTEM.exe

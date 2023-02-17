@@ -19,6 +19,7 @@ public class OffButtonClik : MonoBehaviour
 
     void Start()
     {
+        OffBtnTitleTransfer();
         StartReady();
 
         OffBtn = GetComponent<Button>();
@@ -27,7 +28,7 @@ public class OffButtonClik : MonoBehaviour
 
     public void StartReady()
     {
-        if (DataManager.Instance.data.ImageLight == false)
+        if (DataManager.Instance.data.ImageLight[tmp - 1] == false)
         {
             ImageChange();
         }
@@ -41,7 +42,6 @@ public class OffButtonClik : MonoBehaviour
 
     public void OffBtnCapsule()
     {
-        OffBtnTitleTransfer();
 
         if (DataManager.Instance.data.modeSelect[tmp - 1] == true) // PC ¸ðµå 
         {
@@ -61,7 +61,7 @@ public class OffButtonClik : MonoBehaviour
                 if (PJ.value == 2)
                 {
                     ImageChange();
-                    DataManager.Instance.data.ImageLight = false;
+                    DataManager.Instance.data.ImageLight[tmp - 1] = false;
                     DataManager.Instance.SaveGameData();
                 }
             }

@@ -8,6 +8,12 @@ public class LoadObject : MonoBehaviour
 {
     public GameObject[] CMSList;
     public Toggle[] togglestext;
+
+    private void Awake()
+    {
+        Application.runInBackground = true;
+    }
+
     void Start()
     {
         DataManager.Instance.LoadGameData();

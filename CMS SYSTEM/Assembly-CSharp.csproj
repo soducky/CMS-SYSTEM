@@ -59,6 +59,7 @@
     <Compile Include="Assets\MainScript\Carousel.cs" />
     <Compile Include="Assets\SettingScript\GameData.cs" />
     <Compile Include="Assets\MainScript\LoadObject.cs" />
+    <Compile Include="Assets\Script\Server.cs" />
     <Compile Include="Assets\SettingScript\RemoveList.cs" />
     <Compile Include="Assets\SettingScript\AddButton.cs" />
     <Compile Include="Assets\SettingScript\InputData.cs" />
@@ -75,10 +76,12 @@
     <Compile Include="Assets\MainScript\CMS_Name.cs" />
     <Compile Include="Assets\Script\OnButtonClik.cs" />
     <Compile Include="Assets\PJLink\ProjectorCommandException.cs" />
+    <Compile Include="Assets\Script\Client.cs" />
+    <Compile Include="Assets\Script\OffButtonClik.cs" />
+    <Compile Include="Assets\Script\DeveloperModeEnter.cs" />
     <Compile Include="Assets\PJLink\CommandResponse.cs" />
     <Compile Include="Assets\SettingScript\DeleteButton.cs" />
     <Compile Include="Assets\PJLink\PjlinkClient.cs" />
-    <Compile Include="Assets\Script\OffButtonClik.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

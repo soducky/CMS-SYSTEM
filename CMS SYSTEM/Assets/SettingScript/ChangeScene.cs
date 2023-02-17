@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+    private void Awake()
+    {
+        Application.runInBackground = true;
+    }
+
     public void SettingBtnClik()
     {
         SceneManager.LoadScene("SettingScene");
