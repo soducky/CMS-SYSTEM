@@ -34,6 +34,7 @@ public class LoadObject : MonoBehaviour
                 togglestext[i].transform.GetChild(2).GetComponent<Text>().text = "PJ Mode";
             }
         }
+
     }
 
     void Update()

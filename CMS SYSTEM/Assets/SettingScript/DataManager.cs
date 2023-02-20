@@ -5,6 +5,7 @@ public class DataManager : MonoBehaviour
 {
     static GameObject container;
 
+    public GameObject server;
     // ---싱글톤으로 선언--- //
     static DataManager instance;
     public static DataManager Instance

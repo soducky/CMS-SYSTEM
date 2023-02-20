@@ -17,11 +17,25 @@ public class Server : MonoBehaviour
     TcpListener server;
     bool serverStarted;
 
+    private void Awake()
+    {
+      var obj = FindObjectsOfType<Server>();
+
+        if(obj.Length == 1)
+        {
+            DontDestroyOnLoad(obj[0]);
+        }
+        else
+        {
+            Destroy(obj[1]);
+        }
+    }
     private void Start()
     {
-        ServerCreate();
+        // ServerCreate();
 
-       // this.gameObject.GetComponent<Client>().ConnectToServer();
+        // this.gameObject.GetComponent<Client>().ConnectToServer();
+        ServerCreate();
     }
 
     public void ServerCreate()
@@ -148,6 +162,7 @@ public class Server : MonoBehaviour
         }
     }
 }
+
 
 
 public class ServerClient
