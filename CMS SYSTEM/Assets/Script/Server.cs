@@ -161,6 +161,13 @@ public class Server : MonoBehaviour
             }
         }
     }
+
+    public void OffBtn(string Sendmessage)
+    {
+        Broadcast($"s", clients); // 모든 클라이언트에게 s신호 보냄 
+        Broadcast(Sendmessage, clients);
+        Debug.Log("종료신호를 보냈습니다.");
+    }
 }
 
 

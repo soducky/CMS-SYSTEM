@@ -47,7 +47,7 @@ public class OffButtonClik : MonoBehaviour
         if (DataManager.Instance.data.modeSelect[tmp - 1] == true) // PC 모드 
         {
             Message = DataManager.Instance.data.IPAddress[tmp - 1]; 
-            GameObject.FindWithTag("Server").GetComponent<Client>().OnSendButton(Message);
+            GameObject.FindWithTag("Server").GetComponent<Server>().OffBtn(Message);
         }
 
         else if (DataManager.Instance.data.modeSelect[tmp - 1] == false) // PJ 모드 
